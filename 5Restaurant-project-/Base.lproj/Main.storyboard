@@ -134,11 +134,11 @@
             </objects>
             <point key="canvasLocation" x="584.05797101449275" y="693.75"/>
         </scene>
-        <!--Menue-->
+        <!--Menu-->
         <scene sceneID="fjb-BN-ju2">
             <objects>
                 <navigationController id="zUH-QT-AUU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menue" image="list.bullet.rectangle" catalog="system" id="RXF-PD-5Xz"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="list.bullet.rectangle" catalog="system" id="RXF-PD-5Xz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nLV-6x-Amb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
