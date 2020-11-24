@@ -50,6 +50,6 @@ extension MenuTableViewController {
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text = "$\(menuItem.price)"
+        cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
     }
 }
