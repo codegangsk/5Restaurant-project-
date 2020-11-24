@@ -29,7 +29,13 @@ extension MenuTableViewController {
 
 extension MenuTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return menuItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCellIdentifier", for: indexPath)
+        configure(cell, forItemAt: indexPath)
+        return cell
     }
 }
 
@@ -39,5 +45,11 @@ extension MenuTableViewController {
             self.menuItems = menuItems
             self.tableView.reloadData()
         }
+    }
+    
+    func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
+        let menuItem = menuItems[indexPath.row]
+        cell.textLabel?.text = menuItem.name
+        cell.detailTextLabel?.text = "$\(menuItem.price)"
     }
 }
