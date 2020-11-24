@@ -50,3 +50,13 @@ extension CategoryTableViewController  {
         cell.textLabel?.text = categoryString.capitalized
 }
 }
+
+extension CategoryTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CategoriesToMenuSegue" {
+            let menuTableViewController = segue.destination as! MenuTableViewController
+            let index = tableView.indexPathForSelectedRow!.row
+            menuTableViewController.category = categories[index]
+        }
+    }
+}
