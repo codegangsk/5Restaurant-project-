@@ -8,14 +8,13 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
-    let menuController = MenuController()
     var categories = [String]() 
 }
 
 extension CategoryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuController.fetchCategories { (categories) in
+        MenuController.shared.fetchCategories { (categories) in
             if let categories = categories {
                 self.updateUI(with: categories)
             }
