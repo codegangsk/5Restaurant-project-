@@ -140,6 +140,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" name="AccentColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="orderButtonTapped:" destination="tWq-mU-Ic6" eventType="touchUpInside" id="0AD-jd-IKK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IvU-h9-l8L"/>
