@@ -53,3 +53,13 @@ extension MenuTableViewController {
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
     }
 }
+
+extension MenuTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MenuDetailSegue" {
+            let menuItemDetailViewController = segue.destination as! MenuItemDetailViewController
+            let index = tableView.indexPathForSelectedRow!.row
+            menuItemDetailViewController.menuItem = menuItems[index]
+        }
+    }
+}

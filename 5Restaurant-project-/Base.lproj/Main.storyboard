@@ -82,7 +82,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tWq-mU-Ic6" kind="show" id="xr5-At-TdN"/>
+                                    <segue destination="tWq-mU-Ic6" kind="show" identifier="MenuDetailSegue" id="xr5-At-TdN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="2368" y="42"/>
         </scene>
-        <!--Menu Item Detail Table View Controller-->
+        <!--Menu Item Detail View Controller-->
         <scene sceneID="9Ca-FB-jzS">
             <objects>
-                <viewController id="tWq-mU-Ic6" customClass="MenuItemDetailTableViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tWq-mU-Ic6" customClass="MenuItemDetailViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hm6-4A-9pX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
