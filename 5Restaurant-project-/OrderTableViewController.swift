@@ -8,7 +8,6 @@
 import UIKit
 
 class OrderTableViewController: UITableViewController {
-    var order = Order()
 }
 
 extension OrderTableViewController {
@@ -19,7 +18,7 @@ extension OrderTableViewController {
 
 extension OrderTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  order.menuItems.count
+        return MenuController.shared.order.menuItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,7 +30,7 @@ extension OrderTableViewController {
 
 extension OrderTableViewController {
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
-        let menuItem = order.menuItems[indexPath.row]
+        let menuItem = MenuController.shared.order.menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
     }

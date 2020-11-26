@@ -28,9 +28,10 @@ extension MenuItemDetailViewController {
 
 extension MenuItemDetailViewController {
     @IBAction func orderButtonTapped(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.3) { [self] in
             self.addToOrderButton.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
             self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            MenuController.shared.order.menuItems.append(menuItem)
         }
     }
 }
