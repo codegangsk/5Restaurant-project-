@@ -13,6 +13,7 @@ class OrderTableViewController: UITableViewController {
 extension OrderTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(tableView as Any, selector: #selector(UITableView.reloadData), name: MenuController.orderUpdatedNotification, object: nil)
     }
 }
 
