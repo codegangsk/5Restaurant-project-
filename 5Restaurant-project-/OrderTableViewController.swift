@@ -51,6 +51,9 @@ extension OrderTableViewController {
 
 extension OrderTableViewController {
     @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
+        if segue.identifier == "DismissConfirmationSegue" {
+            MenuController.shared.order.menuItems.removeAll()
+        }
     }
 }
 
