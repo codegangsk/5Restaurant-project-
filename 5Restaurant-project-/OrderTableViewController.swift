@@ -8,8 +8,8 @@
 import UIKit
 
 class OrderTableViewController: UITableViewController {
+    var orderMinutes = 0
 }
-
 extension OrderTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +46,49 @@ extension OrderTableViewController {
         let menuItem = MenuController.shared.order.menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+    }
+}
+
+extension OrderTableViewController {
+    @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
+    }
+}
+
+extension OrderTableViewController {
+    @IBAction func submitButtonTapped(_ sender: UIBarButtonItem) {
+        let orderTotal = MenuController.shared.order.menuItems.reduce(0.0) { (result, menuItem) -> Double in
+            return result + menuItem.price
+        }
+        let formattedOrder = String(format: "$%.2f", orderTotal)
+        
+        let alert = UIAlertController(title: "Confirm Order", message: "You are about to submit your order with a total of \(formattedOrder)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Submit", style: .default) {action in
+            self.uploadOrder()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+extension OrderTableViewController {
+    func uploadOrder() {
+        let menuIds = MenuController.shared.order.menuItems.map { $0.id }
+        MenuController.shared.submitOrder(forMenuIDs: menuIds) { (minutes) in
+            DispatchQueue.main.async {
+                if let minutes = minutes {
+                    self.orderMinutes = minutes
+                    self.performSegue(withIdentifier: "ConfirmationSegue", sender: nil)
+                }
+            }
+        }
+    }
+}
+
+extension OrderTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ConfirmationSegue" {
+            let orderConfirmationViewController = segue.destination as! OrderConfirmationViewController
+            orderConfirmationViewController.minutes = orderMinutes
+        }
     }
 }

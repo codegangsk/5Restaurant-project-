@@ -15,11 +15,9 @@ class OrderConfirmationViewController: UIViewController {
 extension OrderConfirmationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timeRemainingLabel.text = "Thank you for your order! Your wait time is approximately \(minutes!) minutes."
     }
 }
 
-extension OrderConfirmationViewController {
-    @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
-        
-    }
-}
+

@@ -217,10 +217,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Order " id="l5a-uB-eUh">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="TPM-Gg-Ayq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="TPM-Gg-Ayq">
+                            <connections>
+                                <action selector="submitButtonTapped:" destination="Gyx-6U-lEx" id="agV-2B-EQl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="VLx-IN-5Ss" kind="presentation" identifier="ConfirmationSegue" id="pPk-Nd-ygm"/>
+                        <segue destination="VLx-IN-5Ss" kind="modal" identifier="ConfirmationSegue" id="Rwg-Xc-hOq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akd-yg-hPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -235,32 +239,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DKp-pY-m9q">
-                                <rect key="frame" x="180" y="392" width="54" height="58.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydb-vl-s6u">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qu-pD-dJc">
-                                        <rect key="frame" x="0.0" y="28.5" width="54" height="30"/>
-                                        <state key="normal" title="Dismiss"/>
-                                        <connections>
-                                            <segue destination="g2U-Ab-MkC" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="6d4-U7-P6M"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydb-vl-s6u">
+                                <rect key="frame" x="30" y="391" width="354" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="kAH-eH-WWb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06S-Sd-PM9">
+                                <rect key="frame" x="180" y="461" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="g2U-Ab-MkC" kind="unwind" identifier="DismissConfirmationSegue" unwindAction="unwindToOrderListWithSegue:" id="Fqc-iS-bKG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OsI-2F-hKb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DKp-pY-m9q" firstAttribute="centerX" secondItem="QaQ-9H-7CD" secondAttribute="centerX" id="Z7D-Rn-v3m"/>
-                            <constraint firstItem="DKp-pY-m9q" firstAttribute="centerY" secondItem="QaQ-9H-7CD" secondAttribute="centerY" id="aOH-9I-0y7"/>
+                            <constraint firstItem="OsI-2F-hKb" firstAttribute="trailing" secondItem="ydb-vl-s6u" secondAttribute="trailing" constant="30" id="AgF-Tz-vSr"/>
+                            <constraint firstItem="06S-Sd-PM9" firstAttribute="centerX" secondItem="QaQ-9H-7CD" secondAttribute="centerX" id="SnF-GQ-DWq"/>
+                            <constraint firstItem="ydb-vl-s6u" firstAttribute="centerY" secondItem="QaQ-9H-7CD" secondAttribute="centerY" id="SpE-0m-pQB"/>
+                            <constraint firstItem="ydb-vl-s6u" firstAttribute="leading" secondItem="OsI-2F-hKb" secondAttribute="leading" constant="30" id="hP5-Ah-OSd"/>
+                            <constraint firstItem="ydb-vl-s6u" firstAttribute="centerX" secondItem="QaQ-9H-7CD" secondAttribute="centerX" id="lKY-9v-Rco"/>
+                            <constraint firstItem="06S-Sd-PM9" firstAttribute="top" secondItem="ydb-vl-s6u" secondAttribute="bottom" constant="10" id="qGJ-MM-hlf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QZq-BD-fJd"/>
                     <connections>
                         <outlet property="timeRemainingLabel" destination="ydb-vl-s6u" id="d8v-fI-PZk"/>
                     </connections>
