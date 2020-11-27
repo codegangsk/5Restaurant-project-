@@ -13,6 +13,8 @@ class OrderTableViewController: UITableViewController {
 extension OrderTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = editButtonItem
+        
         NotificationCenter.default.addObserver(tableView as Any, selector: #selector(UITableView.reloadData), name: MenuController.orderUpdatedNotification, object: nil)
     }
 }
@@ -26,6 +28,16 @@ extension OrderTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCellIdentifier", for: indexPath)
         configure(cell, forItemAt: indexPath)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            MenuController.shared.order.menuItems.remove(at: indexPath.row)
+        }
     }
 }
 
