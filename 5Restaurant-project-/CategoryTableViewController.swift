@@ -14,20 +14,7 @@ class CategoryTableViewController: UITableViewController {
 extension CategoryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        MenuController.shared.fetchCategories { (categories) in
-            if let categories = categories {
-                self.updateUI(with: categories)
-            }
-        }
-    }
-}
-
-extension CategoryTableViewController {
-    func updateUI(with categories: [String]) {
-        DispatchQueue.main.async {
-            self.categories = categories
-            self.tableView.reloadData()
-        }
+        updateUI()
     }
 }
 
@@ -44,6 +31,11 @@ extension CategoryTableViewController {
 }
 
 extension CategoryTableViewController  {
+    func updateUI() {
+        categories = MenuController.shared.categories
+        tableView.reloadData()
+    }
+    
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let categoryString = categories[indexPath.row]
         cell.textLabel?.text = categoryString.capitalized

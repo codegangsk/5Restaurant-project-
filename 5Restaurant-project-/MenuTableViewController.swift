@@ -15,14 +15,7 @@ class MenuTableViewController: UITableViewController {
 extension MenuTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = category.capitalized
-        MenuController.shared.fetchMenuItems(forCategory: category) { (menuItems) in
-            if let menuItems = menuItems {
-                self.updateUI(with: menuItems)
-            }
-            
-        }
+        updateUI()
     }
 }
 
@@ -39,11 +32,11 @@ extension MenuTableViewController {
 }
 
 extension MenuTableViewController {
-    func updateUI(with menuItems: [MenuItem]) {
-        DispatchQueue.main.async {
-            self.menuItems = menuItems
-            self.tableView.reloadData()
-        }
+    func updateUI() {
+        title = category.capitalized
+        menuItems = MenuController.shared.items(forCategory: category) ?? []
+        
+        tableView.reloadData()
     }
     
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
