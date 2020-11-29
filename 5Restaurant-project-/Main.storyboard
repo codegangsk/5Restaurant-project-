@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu-->
+        <!--Restaurant-->
         <scene sceneID="7pU-2g-oio">
             <objects>
-                <tableViewController id="rYz-Yk-uic" customClass="CategoryTableViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="CategoryTableViewController" id="rYz-Yk-uic" customClass="CategoryTableViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZsU-CJ-KhW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                             <outlet property="delegate" destination="rYz-Yk-uic" id="H2e-gF-5qU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Menu" id="wV8-Lf-vYR"/>
+                    <navigationItem key="navigationItem" title="Restaurant" id="wV8-Lf-vYR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hQ-QY-ZcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +53,7 @@
         <!--Menu Table View Controller-->
         <scene sceneID="Dtr-qg-Fbg">
             <objects>
-                <tableViewController id="zan-7k-9f1" customClass="MenuTableViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="MenuTableViewController" id="zan-7k-9f1" customClass="MenuTableViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SdN-4a-IC7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +105,7 @@
         <!--Menu Item Detail View Controller-->
         <scene sceneID="9Ca-FB-jzS">
             <objects>
-                <viewController id="tWq-mU-Ic6" customClass="MenuItemDetailViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MenuItemDetailViewController" id="tWq-mU-Ic6" customClass="MenuItemDetailViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hm6-4A-9pX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +184,7 @@
         <!--Order -->
         <scene sceneID="fLl-ik-Hay">
             <objects>
-                <tableViewController id="Gyx-6U-lEx" customClass="OrderTableViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="Order Nav" id="Gyx-6U-lEx" customClass="OrderTableViewController" customModule="_Restaurant_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YpA-J1-pBh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,7 +288,7 @@
         <!--Your Order-->
         <scene sceneID="Ein-Fm-bEa">
             <objects>
-                <navigationController id="eag-Vy-ekb" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="OrderTableViewController" id="eag-Vy-ekb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Your Order" image="tray.full" catalog="system" id="cmU-y1-wwG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGn-hW-ZKk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -305,7 +305,7 @@
         <!--Menu-->
         <scene sceneID="fjb-BN-ju2">
             <objects>
-                <navigationController id="zUH-QT-AUU" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="Menu Nav" id="zUH-QT-AUU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menu" image="list.bullet.rectangle" catalog="system" id="RXF-PD-5Xz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nLV-6x-Amb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -322,7 +322,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ICn-Xo-ZB5">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0dW-Yk-4wm" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="Root" automaticallyAdjustsScrollViewInsets="NO" id="0dW-Yk-4wm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0l7-AT-Loy">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
