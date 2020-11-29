@@ -25,6 +25,8 @@ class MenuController {
             return itemsByCategory.keys.sorted()
         }
     }
+    
+    static let menuDataUpdatedNotification = Notification.Name("MenuController.menuDataUpdated")
 }
 
 extension MenuController {
@@ -35,6 +37,10 @@ extension MenuController {
         for item in items {
             itemsByID[item.id] = item
             itemsByCategory[item.category, default: []].append(item)
+            
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: MenuController.menuDataUpdatedNotification, object: nil)
+            }
         }
     }
     

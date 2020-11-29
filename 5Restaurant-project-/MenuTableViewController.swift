@@ -15,6 +15,9 @@ class MenuTableViewController: UITableViewController {
 extension MenuTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdatedNotification, object: nil)
+        
         updateUI()
     }
 }
@@ -32,11 +35,11 @@ extension MenuTableViewController {
 }
 
 extension MenuTableViewController {
-    func updateUI() {
+    @objc func updateUI() {
         title = category.capitalized
-        menuItems = MenuController.shared.items(forCategory: category) ?? []
+        self.menuItems = MenuController.shared.items(forCategory: category) ?? []
         
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
