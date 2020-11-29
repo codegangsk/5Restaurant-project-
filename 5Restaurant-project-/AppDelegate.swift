@@ -11,7 +11,14 @@ import UIKit
 class AppDelegate: UIResponder {}
 
 extension AppDelegate: UIApplicationDelegate {
-
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+       MenuController.shared.loadOrder()
+        return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        MenuController.shared.saveOrder()
+    }
 }   
 
 extension AppDelegate {

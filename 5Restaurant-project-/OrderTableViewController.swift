@@ -56,9 +56,7 @@ extension OrderTableViewController {
                 cell.imageView?.image = image
                 cell.setNeedsLayout()
             }
-            
         }
-        
     }
 }
 
