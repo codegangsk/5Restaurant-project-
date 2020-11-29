@@ -9,7 +9,7 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
     var menuItems = [MenuItem]() 
-    var category: String!
+    var category: String?
 }
 
 extension MenuTableViewController {
@@ -36,6 +36,8 @@ extension MenuTableViewController {
 
 extension MenuTableViewController {
     @objc func updateUI() {
+        guard let category = category else { return }
+        
         title = category.capitalized
         self.menuItems = MenuController.shared.items(forCategory: category) ?? []
         
@@ -74,6 +76,16 @@ extension MenuTableViewController {
 extension MenuTableViewController {
     override func encodeRestorableState(with coder: NSCoder) {
         super.encodeRestorableState(with: coder)
+        
+        guard let category = category else { return }
+        
         coder.encode(category, forKey: "category")
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        
+        category = coder.decodeObject(forKey: "category") as? String
+        updateUI()
     }
 }
