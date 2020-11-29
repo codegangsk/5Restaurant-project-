@@ -12,12 +12,15 @@ class AppDelegate: UIResponder {}
 
 extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-       MenuController.shared.loadOrder()
+        MenuController.shared.loadOrder()
+        MenuController.shared.loadItems()
+        MenuController.shared.loadRemoteData()
         return true
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
         MenuController.shared.saveOrder()
+        MenuController.shared.saveItems()
     }
 }   
 
