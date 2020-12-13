@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0E1BD0256FF94E00CC4A80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E1BCF256FF94E00CC4A80 /* SceneDelegate.swift */; };
 		2A119981256CF275007D8DB9 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A119980256CF275007D8DB9 /* MenuItemDetailViewController.swift */; };
 		2A119992256E5BC4007D8DB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A119991256E5BC4007D8DB9 /* Main.storyboard */; };
 		2A1602582570D80F00A49EA6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1602572570D80F00A49EA6 /* OrderConfirmationViewController.swift */; };
@@ -24,6 +23,11 @@
 		2A99BFAC25675A24008036BB /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BFAB25675A24008036BB /* IntermediaryModels.swift */; };
 		2A99BFB125675F13008036BB /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BFB025675F13008036BB /* Order.swift */; };
 		2A99BFB625676388008036BB /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BFB525676388008036BB /* MenuController.swift */; };
+		2AC979EE25861E6E00050311 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC979ED25861E6E00050311 /* Alamofire.framework */; };
+		2AC979EF25861E6E00050311 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC979ED25861E6E00050311 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AC979F425861E7000050311 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC979F325861E7000050311 /* AlamofireImage.framework */; };
+		2AC979F525861E7000050311 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC979F325861E7000050311 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AC97A052586206900050311 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC97A042586206900050311 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +47,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2AC979F025861E6E00050311 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2AC979EF25861E6E00050311 /* Alamofire.framework in Embed Frameworks */,
+				2AC979F525861E7000050311 /* AlamofireImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2A0E1BCF256FF94E00CC4A80 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../../../../Downloads/5Restaurant-project--main 2/5Restaurant-project-/SceneDelegate.swift"; sourceTree = "<group>"; };
 		2A119980256CF275007D8DB9 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		2A119991256E5BC4007D8DB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2A1602572570D80F00A49EA6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +85,9 @@
 		2A99BFAB25675A24008036BB /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
 		2A99BFB025675F13008036BB /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		2A99BFB525676388008036BB /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		2AC979ED25861E6E00050311 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2AC979F325861E7000050311 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		2AC97A042586206900050311 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC979EE25861E6E00050311 /* Alamofire.framework in Frameworks */,
+				2AC979F425861E7000050311 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +124,7 @@
 				2A99BF7525664F7D008036BB /* 5Restaurant-project-Tests */,
 				2A99BF8025664F7D008036BB /* 5Restaurant-project-UITests */,
 				2A99BF5D25664F7B008036BB /* Products */,
+				2AC979EC25861E6E00050311 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,10 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				2A99BF5F25664F7B008036BB /* AppDelegate.swift */,
-				2A0E1BCF256FF94E00CC4A80 /* SceneDelegate.swift */,
 				2A119980256CF275007D8DB9 /* MenuItemDetailViewController.swift */,
 				2A119991256E5BC4007D8DB9 /* Main.storyboard */,
 				2A1602572570D80F00A49EA6 /* OrderConfirmationViewController.swift */,
+				2AC97A042586206900050311 /* SceneDelegate.swift */,
 				2A99BF6325664F7B008036BB /* ViewController.swift */,
 				2A99BFA62566B987008036BB /* MenuItem.swift */,
 				2A99BFAB25675A24008036BB /* IntermediaryModels.swift */,
@@ -155,6 +179,15 @@
 			path = "5Restaurant-project-UITests";
 			sourceTree = "<group>";
 		};
+		2AC979EC25861E6E00050311 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AC979F325861E7000050311 /* AlamofireImage.framework */,
+				2AC979ED25861E6E00050311 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +198,8 @@
 				2A99BF5825664F7B008036BB /* Sources */,
 				2A99BF5925664F7B008036BB /* Frameworks */,
 				2A99BF5A25664F7B008036BB /* Resources */,
+				2AC979F025861E6E00050311 /* Embed Frameworks */,
+				2AC979F825861EB700050311 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -280,6 +315,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AC979F825861EB700050311 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2A99BF5825664F7B008036BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -292,11 +349,11 @@
 				2A99BFB625676388008036BB /* MenuController.swift in Sources */,
 				2A119981256CF275007D8DB9 /* MenuItemDetailViewController.swift in Sources */,
 				2A99BFAC25675A24008036BB /* IntermediaryModels.swift in Sources */,
-				2A0E1BD0256FF94E00CC4A80 /* SceneDelegate.swift in Sources */,
 				2A1602582570D80F00A49EA6 /* OrderConfirmationViewController.swift in Sources */,
 				2A99BFA72566B987008036BB /* MenuItem.swift in Sources */,
 				2A99BF9D25669150008036BB /* OrderTableViewController.swift in Sources */,
 				2A99BF932566908B008036BB /* CategoryTableViewController.swift in Sources */,
+				2AC97A052586206900050311 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +523,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74DA9KB98N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "5Restaurant-project-/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,6 +546,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74DA9KB98N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "5Restaurant-project-/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
