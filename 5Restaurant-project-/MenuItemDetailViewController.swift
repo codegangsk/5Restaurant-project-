@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class MenuItemDetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
