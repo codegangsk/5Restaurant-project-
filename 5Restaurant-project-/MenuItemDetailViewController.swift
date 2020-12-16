@@ -13,7 +13,6 @@ class MenuItemDetailViewController: UIViewController {
     @IBOutlet var priceLable: UILabel!
     @IBOutlet var detailTextLabel: UILabel!
     @IBOutlet var addToOrderButton: UIButton!
-
     var menuItem: MenuItem?
 }
 
