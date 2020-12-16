@@ -65,3 +65,27 @@ extension MenuItemDetailViewController {
         coder.encode(menuItem.id, forKey: "menuItemiId")
     }
 }
+
+extension MenuItemDetailViewController {
+    func setUpConstraint() {
+        imageView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().offset(8)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom).offset(8)
+            make.leading.equalToSuperview().offset(8)
+        }
+        
+        priceLable.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom).offset(8)
+            make.trailing.equalToSuperview().offset(8)
+        }
+        
+        detailTextLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.leading.trailing.equalToSuperview().offset(8)
+        }
+    }
+}
+
