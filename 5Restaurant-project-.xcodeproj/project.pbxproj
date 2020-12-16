@@ -23,8 +23,13 @@
 		2A99BFAC25675A24008036BB /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BFAB25675A24008036BB /* IntermediaryModels.swift */; };
 		2A99BFB125675F13008036BB /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BFB025675F13008036BB /* Order.swift */; };
 		2A99BFB625676388008036BB /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BFB525676388008036BB /* MenuController.swift */; };
+<<<<<<< HEAD
 		2AA3EC862589F24300F6A636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA3EC852589F24300F6A636 /* SceneDelegate.swift */; };
 		2AA3EC8C2589F25F00F6A636 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA3EC8B2589F25F00F6A636 /* Alamofire */; };
+=======
+		2AA3EC992589F2C700F6A636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA3EC982589F2C700F6A636 /* SceneDelegate.swift */; };
+		2AA3EC9F2589F30D00F6A636 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA3EC9E2589F30D00F6A636 /* SnapKit */; };
+>>>>>>> feature/SnapKit_SPM
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +72,11 @@
 		2A99BFAB25675A24008036BB /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
 		2A99BFB025675F13008036BB /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		2A99BFB525676388008036BB /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		2AA3EC852589F24300F6A636 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+=======
+		2AA3EC982589F2C700F6A636 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+>>>>>>> feature/SnapKit_SPM
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +84,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				2AA3EC8C2589F25F00F6A636 /* Alamofire in Frameworks */,
+=======
+				2AA3EC9F2589F30D00F6A636 /* SnapKit in Frameworks */,
+>>>>>>> feature/SnapKit_SPM
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +134,7 @@
 			children = (
 				2A99BF5F25664F7B008036BB /* AppDelegate.swift */,
 				2A119980256CF275007D8DB9 /* MenuItemDetailViewController.swift */,
+				2AA3EC982589F2C700F6A636 /* SceneDelegate.swift */,
 				2A119991256E5BC4007D8DB9 /* Main.storyboard */,
 				2A1602572570D80F00A49EA6 /* OrderConfirmationViewController.swift */,
 				2AA3EC852589F24300F6A636 /* SceneDelegate.swift */,
@@ -174,7 +188,11 @@
 			);
 			name = "5Restaurant-project-";
 			packageProductDependencies = (
+<<<<<<< HEAD
 				2AA3EC8B2589F25F00F6A636 /* Alamofire */,
+=======
+				2AA3EC9E2589F30D00F6A636 /* SnapKit */,
+>>>>>>> feature/SnapKit_SPM
 			);
 			productName = "5Restaurant-project-";
 			productReference = 2A99BF5C25664F7B008036BB /* 5Restaurant-project-.app */;
@@ -248,7 +266,11 @@
 			);
 			mainGroup = 2A99BF5325664F7B008036BB;
 			packageReferences = (
+<<<<<<< HEAD
 				2AA3EC8A2589F25F00F6A636 /* XCRemoteSwiftPackageReference "Alamofire" */,
+=======
+				2AA3EC9D2589F30D00F6A636 /* XCRemoteSwiftPackageReference "SnapKit" */,
+>>>>>>> feature/SnapKit_SPM
 			);
 			productRefGroup = 2A99BF5D25664F7B008036BB /* Products */;
 			projectDirPath = "";
@@ -300,7 +322,11 @@
 				2A99BFB625676388008036BB /* MenuController.swift in Sources */,
 				2A119981256CF275007D8DB9 /* MenuItemDetailViewController.swift in Sources */,
 				2A99BFAC25675A24008036BB /* IntermediaryModels.swift in Sources */,
+<<<<<<< HEAD
 				2AA3EC862589F24300F6A636 /* SceneDelegate.swift in Sources */,
+=======
+				2AA3EC992589F2C700F6A636 /* SceneDelegate.swift in Sources */,
+>>>>>>> feature/SnapKit_SPM
 				2A1602582570D80F00A49EA6 /* OrderConfirmationViewController.swift in Sources */,
 				2A99BFA72566B987008036BB /* MenuItem.swift in Sources */,
 				2A99BF9D25669150008036BB /* OrderTableViewController.swift in Sources */,
@@ -631,21 +657,37 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+<<<<<<< HEAD
 		2AA3EC8A2589F25F00F6A636 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.4.0;
+=======
+		2AA3EC9D2589F30D00F6A636 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+>>>>>>> feature/SnapKit_SPM
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+<<<<<<< HEAD
 		2AA3EC8B2589F25F00F6A636 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2AA3EC8A2589F25F00F6A636 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+=======
+		2AA3EC9E2589F30D00F6A636 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AA3EC9D2589F30D00F6A636 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+>>>>>>> feature/SnapKit_SPM
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
