@@ -51,7 +51,6 @@ extension MenuItemDetailViewController {
             DispatchQueue.main.async {
                 self.imageView.image = image
             }
-            
         }
     }
 }
