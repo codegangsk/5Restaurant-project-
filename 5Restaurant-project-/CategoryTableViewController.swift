@@ -7,8 +7,16 @@
 
 import UIKit
 
+enum Section: Int , CaseIterable {
+    case first
+}
+
 class CategoryTableViewController: UITableViewController {
-    var categories = [String]() 
+    var categories = [String]()
+
+    private lazy var dataSource = makeDataSource()
+    typealias DataSource = UITableViewDiffableDataSource<Section, CategoryRequested>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, CategoryRequested>
 }
 
 extension CategoryTableViewController {
@@ -16,20 +24,26 @@ extension CategoryTableViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdatedNotification, object: nil)
-        
+        applySnapshot(animatingDifferences: false)
         updateUI()
     }
 }
 
 extension CategoryTableViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+   func makeDataSource() -> DataSource {
+        let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, CategoryRequested) -> UITableViewCell? in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCellIdentifier", for: indexPath) as? CategoryTableViewCell
+            cell?.configure(with: CategoryRequested)
+            return cell
+        }
+        return dataSource
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCellIdentifier", for: indexPath)
-        configure(cell, forItemAt: indexPath)
-        return cell
+    func applySnapshot(animatingDifferences: Bool = true) {
+        var snapshot = Snapshot()
+        snapshot.appendSections(Section.allCases)
+        snapshot.appendItems(CategoryRequested.categoryList)
+        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 }
 

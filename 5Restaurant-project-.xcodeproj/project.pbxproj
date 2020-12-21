@@ -11,6 +11,7 @@
 		2A119992256E5BC4007D8DB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A119991256E5BC4007D8DB9 /* Main.storyboard */; };
 		2A1602582570D80F00A49EA6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1602572570D80F00A49EA6 /* OrderConfirmationViewController.swift */; };
 		2A55AEDA258CCA2C006E559B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A55AED9258CCA2C006E559B /* SceneDelegate.swift */; };
+		2A937057258F820A008F4D46 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A937056258F820A008F4D46 /* CategoryTableViewCell.swift */; };
 		2A99BF6025664F7B008036BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BF5F25664F7B008036BB /* AppDelegate.swift */; };
 		2A99BF6425664F7B008036BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99BF6325664F7B008036BB /* ViewController.swift */; };
 		2A99BF6925664F7C008036BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A99BF6825664F7C008036BB /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		2A119991256E5BC4007D8DB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2A1602572570D80F00A49EA6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		2A55AED9258CCA2C006E559B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2A937056258F820A008F4D46 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		2A99BF5C25664F7B008036BB /* 5Restaurant-project-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "5Restaurant-project-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A99BF5F25664F7B008036BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A99BF6325664F7B008036BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				2A99BFA62566B987008036BB /* MenuItem.swift */,
 				2A99BFAB25675A24008036BB /* IntermediaryModels.swift */,
 				2A99BF922566908B008036BB /* CategoryTableViewController.swift */,
+				2A937056258F820A008F4D46 /* CategoryTableViewCell.swift */,
 				2A99BFB025675F13008036BB /* Order.swift */,
 				2A99BFB525676388008036BB /* MenuController.swift */,
 				2A99BF9725669123008036BB /* MenuTableViewController.swift */,
@@ -308,6 +311,7 @@
 				2A99BFA72566B987008036BB /* MenuItem.swift in Sources */,
 				2A99BF9D25669150008036BB /* OrderTableViewController.swift in Sources */,
 				2A99BF932566908B008036BB /* CategoryTableViewController.swift in Sources */,
+				2A937057258F820A008F4D46 /* CategoryTableViewCell.swift in Sources */,
 				2A55AEDA258CCA2C006E559B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -465,6 +470,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
