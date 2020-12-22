@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MenuItem: Codable, Hashable {
+struct MenuItem: Codable {
     var id: Int
     var name: String
     var detailText: String
@@ -22,14 +22,6 @@ struct MenuItem: Codable, Hashable {
         case price
         case category
         case imageURL = "image_url"
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(category)
-    }
-    
-    static func == (lhs: MenuItem, rhs: MenuItem) -> Bool {
-        lhs.category == rhs.category
     }
 }
 

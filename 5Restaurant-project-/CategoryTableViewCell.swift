@@ -9,6 +9,6 @@ import UIKit
 
  class CategoryTableViewCell: UITableViewCell {
     func configure(with category: CategoryRequested) {
-        self.textLabel?.text = "\(category.category)"
+        self.textLabel?.text = "\(category.category.capitalized)"
 }
 }

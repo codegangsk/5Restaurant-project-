@@ -23,9 +23,8 @@ extension CategoryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdatedNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdatedNotification, object: nil) 
         applySnapshot(animatingDifferences: false)
-        updateUI()
     }
 }
 
@@ -47,16 +46,11 @@ extension CategoryTableViewController {
     }
 }
 
-extension CategoryTableViewController  {
+ extension CategoryTableViewController  {
     @objc func updateUI() {
         categories = MenuController.shared.categories
         self.tableView.reloadData()
     }
-    
-    func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
-        let categoryString = categories[indexPath.row]
-        cell.textLabel?.text = categoryString.capitalized
-}
 }
 
 extension CategoryTableViewController {
