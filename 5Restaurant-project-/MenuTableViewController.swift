@@ -10,6 +10,10 @@ import UIKit
 class MenuTableViewController: UITableViewController {
     var menuItems = [MenuItem]() 
     var category: String?
+    
+    enum Section {
+        case main 
+    }
 }
 
 extension MenuTableViewController {
@@ -58,7 +62,6 @@ extension MenuTableViewController {
                 cell.imageView?.image = image
                 cell.setNeedsLayout()
             }
-            
         }
     }
 }

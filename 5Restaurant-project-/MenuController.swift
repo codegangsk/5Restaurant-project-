@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 class MenuController {
+
     var order = Order() {
         didSet {
             NotificationCenter.default.post(name: MenuController.orderUpdatedNotification, object: nil)
